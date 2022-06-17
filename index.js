@@ -1442,3 +1442,25 @@ const todos = [
         completed: false
     }
 ]
+
+let alertMsg = "";
+for (let user of users) {
+    alertMsg += ("ID: " + user.id + ", " + "Name: " + user.name + ", " + "City: " + user.address.city + "\n");
+}
+alert(alertMsg);
+
+let promptMsg = Number(prompt("Find the users information by adding his/her ID: "));
+console.log(promptMsg);
+
+
+for (todo of todos) {
+    if (promptMsg === todo.userId) {
+        console.log(todo.title);
+    }
+}
+
+for (user of users) {
+    if (promptMsg === user.id) {
+        console.log("Username:" + " " + user.name);
+    }
+}
